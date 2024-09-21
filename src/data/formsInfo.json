@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "Client details",
+    "fields": ["First name", "Last name", "Phone", "Email_(optional)"]
+  },
+  "job": {
+    "name": "Job details",
+    "fields": [["Job type"], ["Job source"], "Job_description_(optional)"]
+  },
+  "service": {
+    "name": "Service location",
+    "fields": ["Address", "City", "State", "Zip code", ["Area"]]
+  },
+  "scheduled": {
+    "name": "Scheduled",
+    "fields": ["Start_date", "Start time", "End time", ["Test_select"]]
+  }
+}

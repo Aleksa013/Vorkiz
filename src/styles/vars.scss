@@ -1,0 +1,19 @@
+:root {
+  --gray: #d9d8d8;
+  --gray-dark: #7c8085;
+  --gray-focus: #484d53;
+  --red: #ff1c1c;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin: 2% auto;
+  width: clamp(380px, 95%, 1200px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

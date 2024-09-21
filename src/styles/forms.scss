@@ -1,0 +1,44 @@
+@import "./vars.scss";
+
+.wrapper {
+  margin: 1% auto;
+  padding: 1%;
+  width: clamp(320px, 95%, 550px);
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+}
+h3 {
+  margin: 0 3%;
+}
+form {
+  margin: 1% auto;
+  padding: 1%;
+  width: clamp(320px, 95%, 550px);
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  input,
+  select {
+    padding: 0.5em;
+    margin: 1%;
+    border-radius: 5px;
+    border: 2px solid var(--gray);
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+    &:focus {
+      cursor: pointer;
+      border: 2px solid var(--gray-focus);
+    }
+  }
+  .input,
+  .select {
+    width: 100%;
+  }
+  .half {
+    width: 44%;
+  }
+}
