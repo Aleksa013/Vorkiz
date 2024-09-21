@@ -7,25 +7,30 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const pages = ["index"];
 
-export const entry = pages.reduce((config, page) => {
+const entry = pages.reduce((config, page) => {
   config[page] = `./src/${page}.js`;
   return config;
 }, {});
-export const output = {
+
+const output = {
   path: _resolve(__dirname, "dist"),
   filename: "[name].js",
   assetModuleFilename: "assets/[name][ext]",
 };
-export const mode = "development";
-export const resolve = {
+
+const mode = "development";
+
+const resolve = {
   extensions: [".js", ".json"],
 };
-export const optimization = {
+
+const optimization = {
   splitChunks: {
     chunks: "all",
   },
 };
-export const module = {
+
+const module = {
   rules: [
     {
       test: /\.html$/,
@@ -60,7 +65,8 @@ export const module = {
     },
   ],
 };
-export const plugins = [].concat(
+
+const plugins = [].concat(
   pages.map(
     (page) =>
       new HtmlWebpackPlugin({
@@ -70,7 +76,19 @@ export const plugins = [].concat(
       })
   )
 );
-export const devServer = {
+
+const devServer = {
   compress: true,
   port: 9000,
+};
+
+export default {
+  entry,
+  output,
+  mode,
+  resolve,
+  optimization,
+  module,
+  plugins,
+  devServer,
 };
